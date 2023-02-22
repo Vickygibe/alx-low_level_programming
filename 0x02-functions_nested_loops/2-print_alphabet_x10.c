@@ -1,33 +1,18 @@
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 
 /**
- * print_alphabet_x10 - function declaration
- * Description: print alphabet in lowercase 10 times
- * Return: void
- */
-
-void print_alphabet_x10(void);
-
-/**
- * print_alphabet_x10 - print alphabet 10 times
- * Description: has no arguements
- * Return: has no return value
+ * print_alphabet_x10 - a function that will print the alphabet 10 times
+ *
  */
 
 void print_alphabet_x10(void)
 {
-	char letter;
-	int count = 0;
+	int alpha_line, ch;
 
-	while (count <= 9)
+	for (alpha_line = 0; alpha_line <= 9; alpha_line++)
 	{
-		for (letter = 'a'; letter <= 'z'; letter++)
-		{
-			_putchar(letter);
-		}
+		for (ch = 'a'; ch <= 'z'; ch++)
+			_putchar(ch);
 		_putchar('\n');
-		count++;
 	}
 }
