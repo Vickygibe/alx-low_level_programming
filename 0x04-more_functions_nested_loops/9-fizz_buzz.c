@@ -1,35 +1,63 @@
+#include <stdio.h>
+#include <math.h>
 #include "main.h"
 
 /**
- * main - print numbers 1 - 100 followed by a new line
- *       numbers that are multiples of 3 print Fizz
- *       numbers that are multiples of 5 print Buzz
- *       numbers that are multiples of 3 n 5 print FizzBuzz
- *       each number and word to be separated by space
- *
- * Return: Always 0 (Success)
-*/
+ * fizz_buzz - function declaration
+ * Description: prints fizz, buzz or fizbuzz for multiples
+ * of 3 and 5
+ * @range: the end number
+ * Return: void
+ */
+
+void fizz_buzz(int range);
+
+/**
+ * main -entry point
+ * Description: calls fizz_buzz
+ * Return: 0
+ */
 
 int main(void)
 {
-	int num;
-
-	for (num = 1; num <= 100; ++num)
-	{
-		if (num % 3 == 0 && !(num % 5 == 0))
-			printf("Fizz");
-		else if (num % 5 == 0 && !(num % 3 == 0))
-			printf("Buzz");
-		else if (num % 3 == 0 && num % 5 == 0)
-			printf("FizzBuzz");
-		else
-			printf("%d", num);
-
-		if (num != 100)
-			printf(" ");
-		else
-			printf("\n");
-	}
-
+	fizz_buzz(100);
 	return (0);
+}
+
+/**
+ * fizz_buzz - function definition
+ * Description: print fizz or buzz for multiples of 3
+ * and 5
+ * @range: the ending number
+ * Return: void
+ */
+
+void fizz_buzz(int range)
+{
+	int number;
+
+	for (number = 1; number <= range; number++)
+	{
+		if (number % 3 == 0 && number % 5 == 0)
+		{
+			printf("FizzBuzz");
+		}
+		else if (number % 3 == 0)
+		{
+			printf("Fizz");
+		}
+		else if (number % 5 == 0)
+		{
+			printf("Buzz");
+		}
+		else
+		{
+			printf("%d", number);
+		}
+		if (number != 100)
+		{
+			printf(" ");
+		}
+	}
+	printf("\n");
 }
