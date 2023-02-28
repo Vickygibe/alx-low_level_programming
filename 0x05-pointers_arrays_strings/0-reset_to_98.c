@@ -1,11 +1,10 @@
-include "main.h"
+#include "main.h"
 
 /**
-* reset_to_98 - Takes a pointer to a parameter and updates its value
-* @n: input integer.
-*
-* Return: no return
-*/
+ * reset_to_98 - function declaration
+ * @n: pointer integer
+ * Return: void
+ */
 
 void reset_to_98(int *n)
 {
